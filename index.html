@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="hammer.js"></script>
+
+
+
+    <title>Declarações de Bolsonaro</title>
+</head>
+<body>
+    <div id="App">
+        <div id="Mortes">
+            <div class="MortesBox">
+                <div class="Grafico">
+                    <span class="GraficoTopo">Casos de COVID no Brasil</span>
+                    <div class="GraficoLinha GraficoLinhaCasos">
+                        <span class="GraficoLinhaLinha GraficoLinhaLinhaCasos" id="GraficoLinhaLinhaCasos"></span>
+                    </div>
+                    <span class="GraficoZero" id="GraficoZeroCasos"></span>
+                    <span class="GraficoMortes" id="GraficoCasos">25</span>
+                    <span class="GraficoMortesTotal" id="GraficoCasosTotal">##.###.###</span>
+                </div>
+                <div class="Grafico">
+                    <span class="GraficoTopo">Mortes por COVID no Brasil</span>
+                    <div class="GraficoLinha">
+                        <span class="GraficoLinhaLinha" id="GraficoLinhaLinhaMortes"></span>
+                    </div>
+                    <span class="GraficoZero" id="GraficoZeroMortes"></span>
+                    <span class="GraficoMortes" id="GraficoMortes">0</span>
+                    <span class="GraficoMortesTotal" id="GraficoMortesTotal">###.889</span>
+                </div>
+            </div>
+        </div>
+        <div id="Video">
+            <video src="video/superdimensionado.mp4" controls autoplay muted></video>
+        </div>
+        <div id="Cronograma">
+            <div class="CronogramaBox">
+                <div class="Linha"></div>
+                <div class="Da" id="CronogramaScroll">
+                    <div class="DeclaracaoBox" id="DeclaracaoBox0" onclick="SelecionarDeclaracao('0'); SelecionarVideo('superdimensionado')">
+                        <div class="Declaracao Declaracao0" id="Declaracao0">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">09/03/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"COVID é superdimensionado"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox1" onclick="SelecionarDeclaracao('1'); SelecionarVideo('gripezinha')">
+                        <div class="Declaracao" id="Declaracao1">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">20/03/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"Não vai ser uma gripezinha que vai me derrubar"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox2" onclick="SelecionarDeclaracao('2'); SelecionarVideo('atleta')">
+                        <div class="Declaracao" id="Declaracao2">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">24/03/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"Pelo meu histórico de atleta"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox3" onclick="SelecionarDeclaracao('3'); SelecionarVideo('coveiro')">
+                        <div class="Declaracao" id="Declaracao3">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">29/03/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"Não sou coveiro"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox4" onclick="SelecionarDeclaracao('4'); SelecionarVideo('edai')">
+                        <div class="Declaracao" id="Declaracao4">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">28/04/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"E daí?"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox5" onclick="SelecionarDeclaracao('5'); SelecionarVideo('maricas')">
+                        <div class="Declaracao" id="Declaracao5">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">10/11/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"Tem que deixar de ser um país de maricas"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox6" onclick="SelecionarDeclaracao('6'); SelecionarVideo('angustia')">
+                        <div class="Declaracao" id="Declaracao6">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">16/12/2020</span>
+                                <span class="DeclaracaoTituloTitulo">"Pra que essa angústia?"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox7" onclick="SelecionarDeclaracao('7'); SelecionarVideo('diad')">
+                        <div class="Declaracao" id="Declaracao7">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">11/01/2021</span>
+                                <span class="DeclaracaoTituloTitulo">"Dia D e Hora H"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DeclaracaoBox" id="DeclaracaoBox8" onclick="SelecionarDeclaracao('8'); SelecionarVideo('asfixiado')">
+                        <div class="Declaracao" id="Declaracao8">
+                            <div class="DeclaracaoCirculo">
+                                <span class="DeclaracaoCirculoCirculo"></span>
+                            </div>
+                            <div class="DeclaracaoTitulo">
+                                <span class="DeclaracaoTituloDeclaracao">18/03/2021</span>
+                                <span class="DeclaracaoTituloTitulo">Assassino imita asfixiado por COVID-19</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="id" value="0">
+
+    <script>
+
+        var videos = ["superdimensionado", "gripezinha", "atleta", "coveiro", "edai", "maricas", "angustia", "diad", "asfixiado"];
+
+        $(document).ready(function(){
+            setTimeout(function(){ 
+                $("video")[0].play()
+            }, );
+
+            RetornaCasosMortes();  
+
+            var idDeclacarao = $("#id").val();
+            idDeclacarao = parseInt(idDeclacarao);
+
+            var myElement = document.getElementById('CronogramaScroll');
+            var hammertime = new Hammer(myElement);
+            hammertime.on('swiperight', function(ev) {
+                var idDeclacarao = $("#id").val();
+                idDeclacarao = parseInt(idDeclacarao);
+
+                if(idDeclacarao > 0){
+                    SelecionarDeclaracao(idDeclacarao - 1);
+                    SelecionarVideo(videos[idDeclacarao - 1])
+                }
+                
+            });
+
+            hammertime.on('swipeleft', function(ev) {
+                var idDeclacarao = $("#id").val();
+                idDeclacarao = parseInt(idDeclacarao);
+
+                if(idDeclacarao < videos.length - 1){
+                    SelecionarDeclaracao(idDeclacarao + 1);
+                    SelecionarVideo(videos[idDeclacarao + 1])
+                }
+            });
+
+        });
+
+        $('video').on('ended',function(){
+
+        });
+    </script>
+</body>
+</html>

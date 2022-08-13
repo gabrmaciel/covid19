@@ -1,0 +1,330 @@
+*{
+    font-family: 'Domine', 'Times New Roman';
+    box-sizing: border-box;
+    margin: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #222
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.2);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+html, body{
+    height: 100%;
+}
+
+#App{
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow-y: hidden;
+}
+
+#Mortes{
+    float: left;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    position: relative;
+}
+
+#Mortes .MortesBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#Mortes .Grafico{
+    
+    display: inline-block;
+    width: 70%;
+    padding: 5px 0;
+}
+
+#Mortes .GraficoTopo{
+    float: left;
+    font-size: 14px;
+    margin-bottom: 4px; 
+    color: #FFF;
+}
+
+#Mortes .GraficoLinha{
+    float: left;
+    width: 100%;
+    height: 10px;
+    border-right: 2px solid #EB0000;
+    margin-bottom: 4px
+}
+
+#Mortes .GraficoLinhaCasos{
+    border-right: 2px solid #0076eb;
+}
+
+#Mortes .GraficoLinhaLinha{
+    float: left;
+    width: 0%;
+    height: 9px;
+    border-left: 2px solid #EB0000;
+    
+    background: #EB0000;
+}
+
+#Mortes .GraficoLinhaLinhaCasos{
+    background:#0076eb;
+    border-left: 2px solid #0076eb;
+    
+}
+
+#Mortes .GraficoZero{
+    float: left;
+    color: #FFF;
+    font-size: 14px;
+}
+
+#Mortes .GraficoMortes{
+    float: left;
+    margin-left: 12px ;
+    color: #FFF;
+    position: relative;
+    left: -11px;
+    font-size: 14px;
+}
+
+#Mortes .GraficoMortesTotal{
+    float: right;
+    color: #FFF;
+    font-size: 14px;
+}
+
+#Video{
+    float: left;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+#Video video{
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+}
+
+#Cronograma{
+    float: left;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin-top: 12px
+}
+
+#Cronograma .CronogramaBox{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%
+}
+
+#Cronograma .Linha{
+    position: absolute;
+    top: 49px;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background: #FFF;
+    opacity: 0.2;
+    border-radius: 4px;
+}
+
+#Cronograma .Da{
+    position: absolute;
+    white-space: nowrap;
+    /*overflow-x: scroll;*/
+
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    padding-bottom: 8px
+}
+
+#Cronograma .DeclaracaoBox{
+    display: inline-block;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#Cronograma .DeclaracaoBox:nth-child(1){
+    margin-left: calc(50% - 150px)
+}
+
+#Cronograma .DeclaracaoBox:nth-last-child(1){
+    margin-right: calc(50% - 150px);
+}
+
+
+
+#Cronograma .Declaracao{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-top: -40px;
+    position: relative;
+    top: 2px;
+}
+
+#Cronograma .Declaracao:hover{
+    transform: scale(1.5);
+}
+
+#Cronograma .Declaracao0{
+    transform: scale(1.5);
+    top: 4px
+}
+
+#Cronograma .DeclaracaoCirculo{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 3px solid #eb0000;
+    background: rgba(235, 0, 0, 0.33);
+    position: relative;
+    margin-top: 60px
+}
+
+#Cronograma .DeclaracaoCirculoCirculo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #eb0000;
+    border-radius: 100%;
+}
+
+#Cronograma .DeclaracaoTitulo{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+#Cronograma .DeclaracaoTituloDeclaracao{
+    float: left;
+    width: 100%;
+    height: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    padding-top: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF;
+}
+
+#Cronograma .DeclaracaoTituloTitulo{
+    float: left;
+    width: 100%;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    font-size: 13px;
+    color: #FFF;
+    white-space: normal;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #Mortes{
+        height: 30%;
+    }
+
+    #Mortes .Grafico{
+        width: 90%;
+    }
+
+    #Video{
+        height: 37.5%;
+    }
+
+    #Video video{
+        width: 100%;
+    }
+
+    #Cronograma{
+        height: 32.5%;
+        margin-top: 0;
+        width: 105%;
+        margin-left: -2.5%;
+        padding-top: 4px;
+    }
+
+    #Cronograma .DeclaracaoBox{
+        width: 200px;
+        height: 210px;
+    }
+    #Cronograma .Declaracao{
+        width: 133px;
+        height: 140px;
+        margin-top: -24px
+    }
+
+    #Cronograma .Declaracao0{
+        top: 2px
+    }
+
+    #Cronograma .DeclaracaoCirculo{
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+    }
+
+    #Cronograma .DeclaracaoTituloDeclaracao{
+        height: 18px;
+        min-height: 18px;
+        max-height: 18px;
+        font-size: 13px;
+    }
+
+    #Cronograma .DeclaracaoTituloTitulo{
+        height: 32px;
+        min-height: 32px;
+        max-height: 32px;
+        font-size: 12px;
+    }
+
+    #Cronograma .DeclaracaoBox:nth-child(1){
+        margin-left: calc(50% - 100px);
+    }
+
+    #Cronograma .DeclaracaoBox:nth-last-child(1){
+        margin-right: calc(50% - 100px);
+    }
+
+    #Cronograma .Linha{
+        top: 41px
+    }
+}

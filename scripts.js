@@ -186,8 +186,8 @@ function RetornaCasosMortes(){
            casos = result[0]
            mortes = result[1]
 
-           $("#GraficoCasosTotal").html(casos.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
-           $("#GraficoMortesTotal").html(mortes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+           //$("#GraficoCasosTotal").html(casos.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
+           //$("#GraficoMortesTotal").html(mortes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."));
         }
     });
 }

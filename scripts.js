@@ -126,6 +126,14 @@ function SelecionarVideo(id){
     declaracao = declaracoes[id];
     console.log(declaracao);
 
+    if(id == 'coveiro' || id == 'edai' || id == 'maricas' || id == 'angustia' || id == 'diad' || id == 'asfixiado'){
+        $("#GraficoCasosTotal").html('10.000.000')
+        $("#GraficoMortesTotal").html('500.000')
+    }else{
+        $("#GraficoCasosTotal").html('10.000')
+        $("#GraficoMortesTotal").html('100')
+    }
+
     var casosHoje = $("#GraficoCasosTotal").text();
     var mortesHoje = $("#GraficoMortesTotal").text();
 

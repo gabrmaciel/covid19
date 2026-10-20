@@ -82,7 +82,7 @@
     },
 
     asfixiado: {
-        frase: "Assassino e filho da puta imita asfixiado",
+        frase: "Genocida imita asfixiado",
         data: "18/03/2021",
         fonte: "PODER 360",
         video: 'asfixiado.mp4',
